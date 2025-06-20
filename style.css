@@ -1,0 +1,143 @@
+body {
+  background-color: #fbffc2b4;
+  position: relative;
+  overflow: hidden;
+}
+
+body::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+
+  background-image:
+    radial-gradient(circle at 5% 10%, red 4px, transparent 4px),
+    radial-gradient(circle at 10% 80%, blue 4px, transparent 4px),
+    radial-gradient(circle at 15% 30%, orange 4px, transparent 4px),
+    radial-gradient(circle at 20% 90%, red 4px, transparent 4px),
+    radial-gradient(circle at 25% 20%, blue 4px, transparent 4px),
+    radial-gradient(circle at 30% 70%, orange 4px, transparent 4px),
+    radial-gradient(circle at 35% 40%, red 4px, transparent 4px),
+    radial-gradient(circle at 40% 10%, blue 4px, transparent 4px),
+    radial-gradient(circle at 45% 80%, orange 4px, transparent 4px),
+    radial-gradient(circle at 50% 50%, red 4px, transparent 4px),
+    radial-gradient(circle at 55% 25%, blue 4px, transparent 4px),
+    radial-gradient(circle at 60% 90%, orange 4px, transparent 4px),
+    radial-gradient(circle at 65% 15%, red 4px, transparent 4px),
+    radial-gradient(circle at 70% 75%, blue 4px, transparent 4px),
+    radial-gradient(circle at 75% 35%, orange 4px, transparent 4px),
+    radial-gradient(circle at 80% 95%, red 4px, transparent 4px),
+    radial-gradient(circle at 85% 45%, blue 4px, transparent 4px),
+    radial-gradient(circle at 90% 5%, orange 4px, transparent 4px),
+    radial-gradient(circle at 95% 85%, red 4px, transparent 4px),
+    radial-gradient(circle at 100% 60%, blue 4px, transparent 4px);
+  
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  filter: blur(2px); /* ✨ Adds the subtle blur */
+}
+
+
+/* Responsive Layout */
+#wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  text-align: center;
+  
+}
+
+#wlblock {
+  width: 100%;
+  max-width: 800px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 40px;
+}
+
+/* Keep intro justified on large screens */
+#intro {
+  font-family: "Inter";
+  text-align: justify;
+  margin-top: -2%;
+  font-size: 1.2rem;
+  font-family: 'Inter', sans-serif;
+  margin-top: -5%;
+}
+
+/* Resume button wrapper */
+#reswrapper {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Button style */
+#resume {
+  width: 230px;
+  height: 50px;
+  border: none;
+  border-radius: 15px;
+  font-size: 27px;
+  font-family: "Bebas Neue";
+  cursor: pointer;
+  transition: all 0.3s ease;
+  filter: blur(1px);
+}
+
+/* Hover effect */
+#resume:hover {
+  background-color: rgb(166, 166, 255);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2),
+              0 6px 20px rgba(0, 0, 0, 0.19);
+  filter: blur(0px);  
+}
+
+#socials{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+}
+#git{
+    filter: blur(1px);
+}
+#lkdin{
+    filter: blur(1px);
+}
+#git:hover {
+    filter: blur(0px);
+}
+
+#lkdin:hover{
+    filter: blur(0px);
+
+}
+
+
+/* 📱 Mobile Responsiveness */
+@media (max-width: 600px) {
+  #wltxt {
+    font-size: 50px;
+  }
+
+  #intro {
+    font-size: 1rem;
+    text-align: left;
+  }
+
+  #resume {
+    /* width: 200%; */
+    font-size: 25px;
+  }
+
+  #reswrapper {
+    width: 100%;
+    justify-content: center;
+  }
+}
